@@ -1,6 +1,7 @@
 from time import sleep
 import random
 import sys
+import images
 
 hods = 50  # количество ходов
 
@@ -248,12 +249,17 @@ def koncovka():
     sleep(3)
     print('Поздравляем, вы прошли квест!')
     sleep(3)
+    print(images.pobeda)
+    sleep(3)
     print('КОНЕЦ!')
+    
 
 def badkoncovka():
     print('Вы проиграли!!!!')
     sleep(2)
     print('Вы не успели выбраться из дома за отведённое время...')
+    sleep(3)
+    print(images.lose)
     sleep(3)
     print('КОНЕЦ :(')
     sys.exit()
@@ -621,7 +627,7 @@ def vivodinventarya(a,b):
     if 'часы' in inventar:
         hod=input('ваши действия:\n1. посмотреть время\n2. нет\n')
         if hod=='1':
-            print(hod//10,':',hod-hod//10*10)
+            print(hods//10,':',(hods-hods//10*10)*10)
             sleep(3)
             pass
         elif hod=='2':
